@@ -8,7 +8,7 @@ def send_email(subject, content, receiver):
 	email_message["Subject"] = subject
 	email_message.set_content(content)
 
-	username = "codspecialops@gmail.com"
+	username = os.getenv("USERNAME")
 	password = os.getenv("PASSWORD")
 
 	gmail = smtplib.SMTP("smtp.gmail.com", 587)
