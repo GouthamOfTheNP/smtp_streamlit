@@ -10,7 +10,6 @@ with st.form(key="my_form"):
 	recipients = [email.strip() for email in recipient.split(",") if email]
 	subject = st.text_input("Subject")
 	content = st.text_area("Content")
-	schedule = st.checkbox("Scheduled email send")
 	if st.form_submit_button("Send"):
 		recipients_sent = []
 		for recipient in recipients:
