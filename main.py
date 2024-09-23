@@ -3,6 +3,8 @@ from send_email import send_email
 from datetime import datetime
 import time as t
 
+print(t.strftime("%H:%M:%S"))
+
 title = st.title("Anonymous Email Sender")
 
 with st.form(key="my_form"):
@@ -12,7 +14,7 @@ with st.form(key="my_form"):
 	content = st.text_area("Content")
 	schedule = st.checkbox("Scheduled email send")
 	date = st.date_input("Date to send")
-	time = st.time_input("Time to send")
+	time = st.time_input("Time to send (UTC)")
 	if st.form_submit_button("Send"):
 		recipients_sent = []
 		if date and time:
