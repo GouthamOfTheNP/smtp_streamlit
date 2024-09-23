@@ -3,7 +3,7 @@ from send_email import send_email
 from datetime import datetime
 import time as t
 
-title = st.title("Mass Email Sender")
+title = st.title("Anonymous Email Sender")
 
 with st.form(key="my_form"):
 	recipient = st.text_input("Recipients", help="Use commas to separate email addresses")
